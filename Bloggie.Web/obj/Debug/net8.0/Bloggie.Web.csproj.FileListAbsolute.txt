@@ -176,3 +176,4 @@ D:\Repos\BloggieMVC\Bloggie\Bloggie.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Cr
 D:\Repos\BloggieMVC\Bloggie\Bloggie.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\Repos\BloggieMVC\Bloggie\Bloggie.Web\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
 D:\Repos\BloggieMVC\Bloggie\Bloggie.Web\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+D:\Repos\BloggieMVC\Bloggie\Bloggie.Web\obj\Debug\net8.0\Bloggie.Web.sourcelink.json
