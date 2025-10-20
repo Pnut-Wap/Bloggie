@@ -51,8 +51,13 @@ namespace Bloggie.Web.Controllers
         }
 
         [HttpGet]
-        public IActionResult Login()
+        public IActionResult Login(string ReturnUrl)
         {
+            var model = new LoginViewModel
+            {
+                ReturnUrl = ReturnUrl
+            };
+
             return View();
         }
 
@@ -63,10 +68,29 @@ namespace Bloggie.Web.Controllers
 
             if (signInResult != null && signInResult.Succeeded)
             {
+                if (!string.IsNullOrWhiteSpace(loginViewModel.ReturnUrl))
+                {
+                    return Redirect(loginViewModel.ReturnUrl);
+                }
+
                 return RedirectToAction("Index", "Home");
             }
 
             // show error notification
+            return View();
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Logout()
+        {
+            await signInManager.SignOutAsync();
+
+            return RedirectToAction("Index", "Home");
+        }
+
+        [HttpGet]
+        public IActionResult AccessDenied()
+        {
             return View();
         }
     }
